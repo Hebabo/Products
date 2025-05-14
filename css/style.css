@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+    border: none; 
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    position: relative;
+}
+body{
+    min-height: 100svh;
+    max-width: 100svw;
+    background-color: gray;
+
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head{
+    width: 100%;
+    background-color: white;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.333);
+}
+input{
+    font-size: 1.6rem;
+    width: 90%;
+    margin: 7rem 0rem 3rem;
+    padding: 30px;
+    border-radius: 10rem;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.662);
+}
+input:focus{
+    outline: none;
+}
+select{
+    background-color: rgb(174, 174, 174);
+    color: white;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+}
+.product-card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 7px 7px 7px rgba(91, 89, 89, 0.61);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    gap:17px;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    gap:10px;
+}
+.btns button{
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.20s;
+}
+
+.add-btn{
+    background-color: rgb(69, 172, 69);
+    color: white;
+    font-weight: bold;
+}
+.add-btn:hover{
+    background-color: rgb(53, 134, 53);
+}
+.add-btn:active{
+    background-color: rgb(28, 88, 28);
+    transform: scale(0.95);
+}
+.view-btn{
+    background-color: rgb(75, 143, 168);
+    color: white;
+    font-weight: bold;
+}
+.view-btn:hover{
+    background-color: rgb(63, 122, 143);
+}
+.view-btn:active{
+    background-color: rgb(28, 87, 108);
+    transform: scale(0.95);
+}
+.data .description{
+    padding-left: 10px;
+    border-left: 2px solid green;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --------------------------------------------------- */
+@media (max-width:412px) {
+    .head{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    input{
+        margin: 9rem 0rem 1rem;
+    }
+}
